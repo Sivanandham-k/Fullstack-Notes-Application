@@ -1,0 +1,109 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #f8f9fa;
+  padding: 20px;
+}
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.note-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: 0.3s;
+}
+
+.note-card:hover {
+  transform: translateY(-5px);
+}
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1050;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+.note-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.note-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.note-content {
+  padding: 20px;
+}
+
+.note-header {
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+margin-bottom: 15px;
+}
+.note-title {
+font-size: 1.25rem;
+font-weight: 600;
+color: #333;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+max-width: 80%;
+}
+.note-actions {
+display: flex;
+gap: 10px;
+}
+
+.delete-btn {
+color: #999;
+background: none;
+border: none;
+font-size: 1rem;
+cursor: pointer;
+transition: color 0.3s;
+}
+
+.delete-btn:hover {
+color: #ef4444;
+}
+.note-text {
+color: #666;
+margin-bottom: 40px;
+white-space: pre-line;
+}
+
+.note-footer {
+display: flex;
+gap: 10px;
+align-items: center;
+position: absolute;
+bottom: 10px;
+}
+
+.note-tag {
+display: inline-flex;
+align-items: center;
+padding: 5px 12px;
+gap: 8px;
+border-radius: 20px;
+font-size: 0.85rem;
+font-weight: 500;
+}
